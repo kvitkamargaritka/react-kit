@@ -1,0 +1,26 @@
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.href(@color: @linkColor, @colorHover: @linkColorHover, @colorActive: @linkColorActive, @colorVisited: @linkColorVisited){
+  &:visited{
+    color: @colorVisited;
+  }
+  &:link{
+    color: @color;
+  }
+  &:hover{
+    color: @colorHover;
+  }
+  &:active{
+    color: @colorActive;
+  }
+}
